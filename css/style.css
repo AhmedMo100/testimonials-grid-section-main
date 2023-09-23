@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* testmonials */
+.testmonials {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(210, 46%, 95%);
+}
+
+/* Grid Items */
+.item1 { grid-area: daniel; }
+.item2 { grid-area: jonathan; }
+.item3 { grid-area: jeanette; }
+.item4 { grid-area: patrick; }
+.item5 { grid-area: kira; }
+
+/* Container */
+.container {
+    width: 80%;
+    height: 75%;
+    display: grid;
+    grid-template-areas: 
+        'daniel daniel daniel daniel jonathan kira'
+        'jeanette patrick patrick patrick patrick kira';
+    gap: 30px;
+}
+.item1 {
+    background-color: hsl(263, 55%, 52%);
+    border-radius: 10px;
+    position: relative;
+    z-index: 0;
+}
+.item1::before {
+    content: url(../images/bg-pattern-quotation.svg);
+    position: absolute;
+    top: 20px;
+    right: 100px;
+    width: 150px;
+    height: 150px;
+    z-index: -1;
+}
+.item2 {
+    background-color: hsl(217, 19%, 35%);
+    border-radius: 10px;
+    width: 300px;
+}
+.item3 {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    width: 300px;
+}
+.item4 {
+    background-color: hsl(219, 29%, 14%);
+    border-radius: 10px;
+}
+.item5 {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    width: 250px;
+}
+.person {
+    display: flex;
+    padding: 20px;
+}
+.person img {
+    height: 40px;
+    width: 40px;
+    border: 1px solid hsl(0, 0%, 81%);
+    border-radius: 50%;
+}
+.person .name {
+    padding: 5px 0 0 10px;
+}
+.name h4 {
+    color: hsl(0, 0%, 90%);
+}
+.name p {
+    color: hsl(0, 0%, 69%);
+    font-size: 13px;
+    margin-top: 3px;
+}
+.title {
+    color: hsl(0, 0%, 100%);
+    padding: 10px 20px 10px 20px;
+    font-family: Barlow;
+}
+.item3 .title, .item5 .title {
+    color: hsl(219, 29%, 14%);
+}
+.item3 .description, .item5 .description {
+    color: hsl(217, 19%, 35%);
+}
+.item3 .name h4, .item5 h4 {
+    color: hsl(219, 29%, 14%);
+} 
+.description {
+    color: hsl(0, 0%, 81%);
+    padding: 10px 20px 15px 20px;
+    font-family: Barlow-description;
+}
+h4 {
+    font-family: Barlow;
+}
+
+
+
+
+
+/* Fonts */
+@font-face {
+    font-family: Barlow;
+    src: url(../Fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-Medium.ttf);
+}
+@font-face {
+    font-family: Barlow-description;
+    src: url(../Fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-Light.ttf);
+}
+
+
+/* Media Queiries */
+@media (max-width: 1100px) {
+    .testmonials {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: hsl(210, 46%, 95%);
+        padding: 50px 0;
+    }
+    .container {
+        width: 70%;
+        height: 100%;
+        display: grid;
+        grid-template-areas: 
+            'daniel'
+            'jonathan'
+            'jeanette'
+            'patrick'
+            'kira';
+        gap: 30px;
+    }
+    .item1::before {
+        content: url(../images/bg-pattern-quotation.svg);
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 150px;
+        height: 150px;
+        z-index: -1;
+    }
+    .item2 {
+        background-color: hsl(217, 19%, 35%);
+        border-radius: 10px;
+        width: 100%;
+    }
+    .item3 {
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 10px;
+        width: 100%;
+    }
+    .item5 {
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 10px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .testmonials {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: hsl(210, 46%, 95%);
+        padding: 50px 0;
+    }
+}
